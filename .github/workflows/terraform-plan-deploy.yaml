@@ -10,7 +10,6 @@ on:
 
 jobs:
   terraform_plan:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -57,7 +56,6 @@ jobs:
         path: terraform/tfplan
 
   terraform_apply:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
