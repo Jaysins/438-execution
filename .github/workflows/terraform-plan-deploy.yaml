@@ -71,7 +71,6 @@ jobs:
           })
 
   terraform_apply:
-    if: github.event.pull_request.merged == true
     needs: terraform_plan
     runs-on: ubuntu-latest
     permissions:
