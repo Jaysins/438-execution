@@ -3,3 +3,4 @@ variable "bucket_name" {
   type        = string
   default     = "my-unique-bucket-name-12345"
 }
+
