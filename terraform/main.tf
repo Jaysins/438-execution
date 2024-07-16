@@ -1,13 +1,12 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-1"
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = var.bucket_name
-  acl    = "private"
+  bucket = "my-unique-bucket-name-12345"
+}
 
-  tags = {
-    Name        = var.bucket_name
-    Environment = "Dev"
-  }
+resource "aws_s3_bucket_acl" "example_acl" {
+  bucket = aws_s3_bucket.example.bucket
+  acl    = "private"
 }
