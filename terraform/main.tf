@@ -2,11 +2,11 @@ provider "aws" {
   region = "us-east-2"
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "my-unique-bucket-name-12345"
+resource "aws_s3_bucket" "438_bucket" {
+  bucket = "438-execution-bucket"
 }
 
-resource "aws_s3_bucket_acl" "example_acl" {
-  bucket = aws_s3_bucket.example.bucket
+resource "aws_s3_bucket_acl" "438_execution_acl" {
+  bucket = aws_s3_bucket.438_bucket.bucket
   acl    = "private"
 }
