@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "execution_test" {
-  bucket = "execution_test_bucket"
+  bucket = "execution-test-bucket"
 }
 
 resource "aws_s3_bucket_acl" "execution_test_acl" {
