@@ -3,4 +3,3 @@ variable "bucket_name" {
   type        = string
   default     = "438-execution-bucket"
 }
-
